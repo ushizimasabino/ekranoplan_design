@@ -1,0 +1,22 @@
+Requirements Adjustments from Lecture 3/29
+
+* Treat R-2 as LOWER BOUND
+
+* Consider giving an upper bound for flight within ground effect; 
+	"UP TO 50FT"
+	
+* In back half of cruise segment, plane will be much lighter.
+	Compute a ceiling for flight out of ground effect.
+	
+* Report payload in terms of volume AND weight, consider even giving a square footage of the cargo hold's deck (think about airlifting tanks)
+
+* Water conditions will dictate the optimal cruise height. We need to report this parameter
+
+* Consider the water conditions that allow for takeoff.
+
+* Combine R-6 and R-7
+
+* See if we can get a bound on cruise speed from conventional jets flying this route; we need to fly at least as much weight in the same time period.
+* As far as hydrodynamics goes we don't need to do the hull in detail; we just need to get a C_D_R from Martinelli's correlation and figure out the approach conditions to avoid skipping.
+
+* Raymer has a correlation between weight and a variable sweep mechanism, if we decide we need this.
