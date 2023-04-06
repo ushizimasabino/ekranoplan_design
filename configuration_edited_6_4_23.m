@@ -3,12 +3,12 @@ clear;
 close all;
 
 % Cargo = 5400;                       %ft^3
-Mcruise = 0.4;                        % cruise Mach number
+Mcruise = 0.5;                        % cruise Mach number
 % Range = 7500;                       % Nautical Miles
 % RangeFt = Range * 6076.12;          % nmi to ft
 % Alt = 35000;                        % ft
 % Altm = Alt*0.3048;                  % m
-Vapproach = 100;                    % knots
+Vapproach = 200;                    % knots
 Vapproachft = Vapproach*1.68781;    % ft/s
 %CargoDensity = 10; % lbs/ft^3
 
@@ -18,7 +18,7 @@ TEU_mass = 4780;                    % lbs
 TEU_n = 60;                        % Number of TEUs
 Range = 6000;                       % Nautical Miles - LA - Shanghai
 RangeFt = Range * 6076.12;          % nmi to ft
-Alt = 100;                          % ft ***
+Alt = 150;                          % ft ***
 
 W_TEU = TEU_gross_mass*TEU_n;
 W_TEU_empty = TEU_mass*TEU_n;
@@ -40,7 +40,7 @@ L_Dfactor = 1;                  % Propeller most efficient cruise L/D factor
 L_D = 40;                           % Estimate from Raymer
 a35000 = 969.16;                    % Speed of sound at 35000ft
 Vcruise = Mcruise * a100; 
-SFCcruise = 0.3./(3600);              % Estimate from Raymer from 1/hr to 1/s
+SFCcruise = 0.38./(3600);              % Estimate from Raymer from 1/hr to 1/s
 
 W1_0 = 0.95;%<<<< questionable        
 % Takeoff Weight factor *** better estimate?
@@ -103,7 +103,7 @@ f = @(x) x./(TOP4*sigma*ClMax);       % Eqn 5.9, f = W/S, x = T/W, Takeoff
 g = @(x) ((qcruise*Cdo)./x) + x.*(1./(qcruise.*pi.*AR.*e)); % Eq 5.24, g = W/S, Cruise
 W_Sstall = Vstall.^2*rho_td_ft*ClMax*0.5; % Relation between W/S and Vstall, Stall
 
-W_S = linspace(0,100,1000);         % W/S from 0 to 200
+W_S = linspace(0,210,1000);         % W/S from 0 to 200
 
 figure()
 plot(W_S,f(W_S),'LineWidth',2)
@@ -116,7 +116,7 @@ xlabel('W/S - Wing Loading (lb/ft^2)')
 ylabel('T/W - Thrust to Weight ratio')
 
 ylim([0,0.4])
-xlim([0,100])
+xlim([0,210])
 
 W_Sgraph = 35; % Selected W_S and T_W from graph
 T_Wgraph = 0.08;
