@@ -42,7 +42,8 @@ a35000 = 969.16;                    % Speed of sound at 35000ft
 Vcruise = Mcruise * a100; 
 SFCcruise = 0.3./(3600);              % Estimate from Raymer from 1/hr to 1/s
 
-W1_0 = 0.95;                        % Takeoff Weight factor *** better estimate?
+W1_0 = 0.95;%<<<< questionable        
+% Takeoff Weight factor *** better estimate?
 W3_2 = exp((-RangeFt*SFCcruise)./(Vcruise*L_D*L_Dfactor)); % Breguet range equation
 W5_4 = 0.995;                       % Landing Weight factor
 
@@ -56,25 +57,25 @@ K = 1; % fixed sweep
 f = @(x) (Wpayload)./(1-Wf_o-x);  %Eqn 3.4
 g = @(x) exp(1./C.*log(1./(A.*K).*x));  %Table 3.1
 h = @(x) f(x) - g(x);                   %Function handle for intersection
-x_intersect = fzero(h, 0.4);
-y_intersect = f(x_intersect);
+We_o = fzero(h, 0.4);
+W_to = f(We_o);
 
 % range of empty weight fraction
 we1 = linspace(0.4,0.5,1000); % we/w0 Box 3.1 0.436 to 0.432
 
-plot(we1,f(we1),'b-',we1,g(we1),'r-',x_intersect,y_intersect,'go','LineWidth',2);
+plot(we1,f(we1),'b-',we1,g(we1),'r-',We_o,W_to,'go','LineWidth',2);
 legend('Eqn3.4','Table3.1')
 xlabel('weight fraction: we/w0')
 ylabel('takeoff weight w0')
 
-TEU_frac_gross = W_TEU_empty./y_intersect;
-TEU_frac_empty = W_TEU_empty./(y_intersect.*x_intersect);
+TEU_frac_gross = W_TEU_empty./W_to;
+TEU_frac_empty = W_TEU_empty./(W_to.*We_o);
 
 %% Thrust to Weight Ratio and Wing Loading 
 
 SweepQuart = 0;                % fig 4.19
 ClMax = 2.5;                    % Given by Gigi
-Cdo = 0.0105*0.777;             % For jet aircraft section 5.3.7
+Cdo =  0.00574;             % Given by VSPAero -- Ben's Aerocon config
 AR = 3;                         % Aspect ratio from chapter 3
 TOP4 = 300;                     % Takeoff parameter for 4 engines Fig 5.4
 e = 0.85;                        % Oswald efficieny factor section 5.3.7
@@ -98,7 +99,6 @@ qcruise = 0.5*rho_cruise_ft*Vcruise.^2; % Dynamic pressure at cruise
 vto = 100*1.68781; % ft/s takeoff speed of 737
 dhdt = 10; % ft/s climb rate set by FAR 25
 
-
 f = @(x) x./(TOP4*sigma*ClMax);       % Eqn 5.9, f = W/S, x = T/W, Takeoff
 g = @(x) ((qcruise*Cdo)./x) + x.*(1./(qcruise.*pi.*AR.*e)); % Eq 5.24, g = W/S, Cruise
 W_Sstall = Vstall.^2*rho_td_ft*ClMax*0.5; % Relation between W/S and Vstall, Stall
@@ -121,7 +121,7 @@ xlim([0,100])
 W_Sgraph = 35; % Selected W_S and T_W from graph
 T_Wgraph = 0.08;
 
-Sref = y_intersect/W_Sgraph; % Reference area from graph ft^2 
+Sref = W_to/W_Sgraph; % Reference area from graph ft^2 
 
 b = sqrt(Sref*AR); % Wing span 
 
@@ -130,8 +130,7 @@ b = sqrt(Sref*AR); % Wing span
 a = 0.67; % Table 6.3 for general aviation - twin engine 
 C = 0.43;
 
-fuselage_length_raymer = a*y_intersect.^C; % ft
+fuselage_length_raymer = a*W_to.^C; % ft
 
-
-Thrust_req = T_Wgraph .* y_intersect; % Total thrust required in lbf
+Thrust_req = T_Wgraph .* W_to; % Total thrust required in lbf
 Thrust_per_engine = Thrust_req/2;
