@@ -1,5 +1,5 @@
 clc;
-clear all;
+clear;
 close all;
 
 % Cargo = 5400;                       %ft^3
@@ -29,12 +29,17 @@ Wcrew = Ncrew * PassWeight;
 Wpayload = Wcrew + W_TEU;
 
 %% Design Gross Takeoff Weight Estimate
+[T0,a0,P0,rho0] = atmosisa(0); % Sea-level conditions
+[T100,a100,P100,rho100] = atmosisa(100); % Cruise conditions
+
+a0 = a0*3.28084; % Speed of sound at sea level in ft/s
+a100 = a100*3.28084; % Speed of sound at cruise in ft/s
 
 L_Dfactor = 1;                  % Propeller most efficient cruise L/D factor
 % L_Dfactor = 0.866;              % Turbojet most efficient cruise L/D factor
-L_D = 35;                           % Estimate from Raymer
+L_D = 40;                           % Estimate from Raymer
 a35000 = 969.16;                    % Speed of sound at 35000ft
-Vcruise = Mcruise * a35000; 
+Vcruise = Mcruise * a100; 
 SFCcruise = 0.3./(3600);              % Estimate from Raymer from 1/hr to 1/s
 
 W1_0 = 0.95;                        % Takeoff Weight factor *** better estimate?
@@ -68,7 +73,7 @@ TEU_frac_empty = W_TEU_empty./(y_intersect.*x_intersect);
 %% Thrust to Weight Ratio and Wing Loading 
 
 SweepQuart = 0;                % fig 4.19
-ClMax = 1.7;                    % Double slotted flaps (same as 767) fig 5.3
+ClMax = 2.5;                    % Given by Gigi
 Cdo = 0.0105*0.777;             % For jet aircraft section 5.3.7
 AR = 3;                         % Aspect ratio from chapter 3
 TOP4 = 300;                     % Takeoff parameter for 4 engines Fig 5.4
@@ -77,20 +82,20 @@ gft = 32;                       % ft/s^2
 
 Vstall = Vapproachft./1.3;
 
-rhosl = 1.225; 
-rho_cruise = 1.225;
+rhosl = rho0; 
+rho_cruise = rho100;
 
 % [T,a,P,rho_cruise] = atmosisa(Altm);        % Atmosphere data
 rho_cruise_ft = rho_cruise./515.37881852553;% Convert to slugs/ft^3
 
-rho_td = 1.225;                             % rho touchdown kg/m^3
+rho_td = rho0;                             % rho touchdown kg/m^3
 rho_td_ft = rho_td./515.37881852553;        % Convert to slugs/ft^3
 
 sigma = rho_td./rhosl;                      % Density ratio
 
 qcruise = 0.5*rho_cruise_ft*Vcruise.^2; % Dynamic pressure at cruise 
 
-vto = 249.333; % ft/s takeoff speed of 737
+vto = 100*1.68781; % ft/s takeoff speed of 737
 dhdt = 10; % ft/s climb rate set by FAR 25
 
 
