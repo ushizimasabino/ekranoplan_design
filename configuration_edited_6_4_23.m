@@ -3,12 +3,12 @@ clear;
 close all;
 
 % Cargo = 5400;                       %ft^3
-Mcruise = 0.5;                        % cruise Mach number
+Mcruise = 0.6;                        % cruise Mach number
 % Range = 7500;                       % Nautical Miles
 % RangeFt = Range * 6076.12;          % nmi to ft
 % Alt = 35000;                        % ft
 % Altm = Alt*0.3048;                  % m
-Vapproach = 200;                    % knots
+Vapproach = 40;                    % knots
 Vapproachft = Vapproach*1.68781;    % ft/s
 %CargoDensity = 10; % lbs/ft^3
 
@@ -75,7 +75,7 @@ TEU_frac_empty = W_TEU_empty./(W_to.*We_o);
 
 SweepQuart = 0;                % fig 4.19
 ClMax = 2.5;                    % Given by Gigi
-Cdo =  0.00574;             % Given by VSPAero -- Ben's Aerocon config
+Cdo =  0.007;             % Given by VSPAero -- Ben's Aerocon config
 AR = 3;                         % Aspect ratio from chapter 3
 TOP4 = 300;                     % Takeoff parameter for 4 engines Fig 5.4
 e = 0.85;                        % Oswald efficieny factor section 5.3.7
@@ -90,7 +90,7 @@ rho_cruise = rho100;
 rho_cruise_ft = rho_cruise./515.37881852553;% Convert to slugs/ft^3
 
 rho_td = rho0;                             % rho touchdown kg/m^3
-rho_td_ft = rho_td./515.37881852553;        % Convert to slugs/ft^3
+rho_td_ft = rho_td.*0.0624279606;        % Convert to lbs/ft^3
 
 sigma = rho_td./rhosl;                      % Density ratio
 
@@ -103,7 +103,8 @@ f = @(x) x./(TOP4*sigma*ClMax);       % Eqn 5.9, f = W/S, x = T/W, Takeoff
 g = @(x) ((qcruise*Cdo)./x) + x.*(1./(qcruise.*pi.*AR.*e)); % Eq 5.24, g = W/S, Cruise
 W_Sstall = Vstall.^2*rho_td_ft*ClMax*0.5; % Relation between W/S and Vstall, Stall
 
-W_S = linspace(0,210,1000);         % W/S from 0 to 200
+x_limit = 300;
+W_S = linspace(0,x_limit,1000);         % W/S from 0 to 200
 
 figure()
 plot(W_S,f(W_S),'LineWidth',2)
@@ -116,7 +117,7 @@ xlabel('W/S - Wing Loading (lb/ft^2)')
 ylabel('T/W - Thrust to Weight ratio')
 
 ylim([0,0.4])
-xlim([0,210])
+xlim([0,x_limit])
 
 W_Sgraph = 35; % Selected W_S and T_W from graph
 T_Wgraph = 0.08;
