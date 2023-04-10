@@ -40,7 +40,7 @@ L_Dfactor = 1;                  % Propeller most efficient cruise L/D factor
 L_D = 40;                           % Estimate from Raymer
 a35000 = 969.16;                    % Speed of sound at 35000ft
 Vcruise = Mcruise * a100; 
-SFCcruise = 0.38./(3600);              % Estimate from Raymer from 1/hr to 1/s
+SFCcruise = 0.478./(3600);              % Estimate from Raymer from 1/hr to 1/s
 
 W1_0 = 0.95;%<<<< questionable        
 % Takeoff Weight factor *** better estimate?
@@ -77,7 +77,7 @@ SweepQuart = 0;                % fig 4.19
 ClMax = 2.5;                    % Given by Gigi
 Cdo =  0.007;             % Given by VSPAero -- Ben's Aerocon config
 AR = 3;                         % Aspect ratio from chapter 3
-TOP4 = 300;                     % Takeoff parameter for 4 engines Fig 5.4
+TOP4 = 1000;                     % Takeoff parameter for 4 engines Fig 5.4
 e = 0.85;                        % Oswald efficieny factor section 5.3.7
 gft = 32;                       % ft/s^2
 
