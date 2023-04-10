@@ -115,12 +115,13 @@ xline(W_Sstall,'LineWidth',2)
 legend('Takeoff','Cruise','VStall')
 xlabel('W/S - Wing Loading (lb/ft^2)')
 ylabel('T/W - Thrust to Weight ratio')
+grid minor
 
 ylim([0,0.4])
 xlim([0,x_limit])
 
-W_Sgraph = 35; % Selected W_S and T_W from graph
-T_Wgraph = 0.08;
+W_Sgraph = 257.8; % Selected W_S and T_W from graph
+T_Wgraph = 0.11;
 
 Sref = W_to/W_Sgraph; % Reference area from graph ft^2 
 
