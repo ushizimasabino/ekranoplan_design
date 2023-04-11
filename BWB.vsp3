@@ -11,12 +11,12 @@
         <CORZ Value="0.000000000000000000e+00" ID="RXDRMURDNBS"/>
         <PanX Value="0.000000000000000000e+00" ID="CHFOWREYBKH"/>
         <PanY Value="0.000000000000000000e+00" ID="OCWNTSXRDFF"/>
-        <RotationX Value="3.664127380258542388e+01" ID="PBNADJFJDRR"/>
-        <RotationY Value="-6.218228809060620677e+01" ID="RFGIYFYJNKT"/>
-        <RotationZ Value="-6.452261142857605591e+01" ID="VQFDIZGFEEL"/>
+        <RotationX Value="4.054427953585707201e+01" ID="PBNADJFJDRR"/>
+        <RotationY Value="-5.507743652349973473e+01" ID="RFGIYFYJNKT"/>
+        <RotationZ Value="-5.813875463025612333e+01" ID="VQFDIZGFEEL"/>
         <ViewportX Value="0.000000000000000000e+00" ID="OMQCUZJODFA"/>
         <ViewportY Value="0.000000000000000000e+00" ID="ZSJUYNQNKHA"/>
-        <Zoom Value="4.217082262039184570e-01" ID="FHKWOPASOJU"/>
+        <Zoom Value="4.908197224140167236e-01" ID="FHKWOPASOJU"/>
       </AdjustView>
       <AirfoilExport>
         <AFAppendGeomIDFlag Value="1.000000000000000000e+00" ID="AFMRARQTTID"/>
@@ -27,7 +27,7 @@
         <AxisLength Value="1.000000000000000000e+00" ID="EHSJBNFLLSN"/>
       </Axis>
       <BBox>
-        <X_Len Value="2.310530202392520209e+02" ID="FSDVVOVTSKH"/>
+        <X_Len Value="2.310460171464692962e+02" ID="FSDVVOVTSKH"/>
         <X_Min Value="-7.225812571886193469e-02" ID="QGXLAEXVFNR"/>
         <Y_Len Value="3.986507756271153653e+02" ID="NQCOJEWWADH"/>
         <Y_Min Value="-1.993253878135576826e+02" ID="QUWPLJINYJY"/>
@@ -326,7 +326,7 @@
         </Attach>
         <BBox>
           <X_Len Value="2.309642279375793521e+02" ID="TMGRLYABMBM"/>
-          <X_Min Value="-7.225812571886192082e-02" ID="RUINZYPDMUE"/>
+          <X_Min Value="-7.225812571886193469e-02" ID="RUINZYPDMUE"/>
           <Y_Len Value="3.986507756271153653e+02" ID="XQHBUOBBGVG"/>
           <Y_Min Value="-1.993253878135576826e+02" ID="VZEYYIVPQEW"/>
           <Z_Len Value="3.782492296361640172e+01" ID="JRCFNLVIXTS"/>
@@ -353,7 +353,7 @@
           <Density Value="1.000000000000000000e+00" ID="PSRZTYBETJD"/>
           <Mass_Area Value="1.000000000000000000e+00" ID="SFFEMNGEFJR"/>
           <Mass_Prior Value="0.000000000000000000e+00" ID="VCTSPHORKPP"/>
-          <Shell_Flag Value="1.000000000000000000e+00" ID="TNQPUZUKILM"/>
+          <Shell_Flag Value="0.000000000000000000e+00" ID="TNQPUZUKILM"/>
         </Mass_Props>
         <Negative_Volume_Props>
           <Negative_Volume_Flag Value="0.000000000000000000e+00" ID="JWODLEZAACD"/>
@@ -371,8 +371,8 @@
           <TeTwRatio Value="1.000000000000000000e+00" ID="HXNJYMQDBFB"/>
         </ParasiteDragProps>
         <Shape>
-          <Tess_U Value="1.600000000000000000e+01" ID="ECXBPFTZPFY"/>
-          <Tess_W Value="3.300000000000000000e+01" ID="OBXVWTBXACZ"/>
+          <Tess_U Value="5.000000000000000000e+00" ID="ECXBPFTZPFY"/>
+          <Tess_W Value="2.900000000000000000e+01" ID="OBXVWTBXACZ"/>
           <Wake Value="0.000000000000000000e+00" ID="XPHMXMFXAWL"/>
         </Shape>
         <Sym>
@@ -389,11 +389,11 @@
         <WingGeom>
           <CorrectAirfoilthicknessFlag Value="1.000000000000000000e+00" ID="JYTJBDXVHBI"/>
           <LECluster Value="2.500000000000000000e-01" ID="GNPZNIFTWLV"/>
-          <MaxGrowth Value="1.437005756083839181e+00" ID="CPYWZWFOPST"/>
+          <MaxGrowth Value="1.508402814009914161e+00" ID="CPYWZWFOPST"/>
           <RelativeDihedralFlag Value="0.000000000000000000e+00" ID="FNYOTUYBIEP"/>
           <RelativeTwistFlag Value="0.000000000000000000e+00" ID="YSWWAGZIPKG"/>
           <RotateAirfoilMatchDideralFlag Value="0.000000000000000000e+00" ID="QDKLPLCPECU"/>
-          <SmallPanelW Value="5.999215315806447624e-01" ID="NKUHWNDKJQH"/>
+          <SmallPanelW Value="7.016774027438534844e-01" ID="NKUHWNDKJQH"/>
           <TECluster Value="2.500000000000000000e-01" ID="XETNOJYUKSS"/>
           <TotalAR Value="3.630258315361039489e+00" ID="PKIONLONQEV"/>
           <TotalArea Value="4.301395252510128921e+04" ID="KRUHTJYGJVJ"/>
@@ -428,7 +428,7 @@
         <Child_List/>
       </GeomBase>
       <Material>
-        <Name>Aluminum</Name>
+        <Name>Custom</Name>
       </Material>
       <Wire_Color>
         <ParmContainer>
@@ -1965,7 +1965,7 @@ void Scale(double curr_scale )
         <Num_of_Tex>0</Num_of_Tex>
       </Textures>
       <Geom>
-        <Set_List>1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, </Set_List>
+        <Set_List>1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, </Set_List>
         <SubSurfaces/>
         <FeaStructures/>
       </Geom>
@@ -2295,12 +2295,12 @@ void Scale(double curr_scale )
           <V_Attach_Location Value="9.999999999999999547e-07" ID="CSKGLCUBELM"/>
         </Attach>
         <BBox>
-          <X_Len Value="4.598076211353316012e+01" ID="YTKYEIGEUWG"/>
-          <X_Min Value="1.850000000000000000e+02" ID="TKKBESIFOYV"/>
-          <Y_Len Value="9.984931125201997304e+01" ID="WDDMPNGMTGB"/>
-          <Y_Min Value="-4.992465562600998652e+01" ID="XSISIMQGLRH"/>
-          <Z_Len Value="4.205244112018920788e+01" ID="MAQZMBOACAG"/>
-          <Z_Min Value="-8.457271356933080408e-01" ID="RQXIEZZOEZF"/>
+          <X_Len Value="4.597421905364694794e+01" ID="YTKYEIGEUWG"/>
+          <X_Min Value="1.849995399671034875e+02" ID="TKKBESIFOYV"/>
+          <Y_Len Value="9.885063633690234042e+01" ID="WDDMPNGMTGB"/>
+          <Y_Min Value="-4.942531816845117021e+01" ID="XSISIMQGLRH"/>
+          <Z_Len Value="4.220983082297809119e+01" ID="MAQZMBOACAG"/>
+          <Z_Min Value="-7.632902837192901968e-01" ID="RQXIEZZOEZF"/>
         </BBox>
         <EndCap>
           <CapUMaxLength Value="1.000000000000000000e+00" ID="NQXHRHFEHFN"/>
@@ -2382,8 +2382,8 @@ void Scale(double curr_scale )
           <X_Rotation Value="6.500000000000000000e+01" ID="EBVFAUFDFLO"/>
           <Y_Location Value="3.000000000000000000e+01" ID="JZGETSOXANB"/>
           <Y_Rel_Location Value="3.000000000000000000e+01" ID="AKUFIGANOHC"/>
-          <Y_Rel_Rotation Value="0.000000000000000000e+00" ID="VVTYRPPBHPN"/>
-          <Y_Rotation Value="0.000000000000000000e+00" ID="GLCYVLJSIAS"/>
+          <Y_Rel_Rotation Value="-1.000000000000000000e+00" ID="VVTYRPPBHPN"/>
+          <Y_Rotation Value="-1.000000000000000000e+00" ID="GLCYVLJSIAS"/>
           <Z_Location Value="0.000000000000000000e+00" ID="OLYWHHGMVUP"/>
           <Z_Rel_Location Value="0.000000000000000000e+00" ID="QIBWRKMBMNA"/>
           <Z_Rel_Rotation Value="0.000000000000000000e+00" ID="UBTCRTQZVTM"/>
@@ -2759,7 +2759,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.560256332940528523e+01" ID="CFVWROKICSK"/>
-          <X_Min Value="1.990771608130963841e+02" ID="IENNUUTMRSX"/>
+          <X_Min Value="4.907716081309638412e+01" ID="IENNUUTMRSX"/>
           <Y_Len Value="2.148528137423857487e+01" ID="FOHFKZLPLME"/>
           <Y_Min Value="4.925735931288071612e+01" ID="RQBUVSEOGHG"/>
           <Z_Len Value="2.126763991026831491e+01" ID="RSVGVXTTLDJ"/>
@@ -2827,8 +2827,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="QGEFTGXSFCX"/>
           <Origin Value="0.000000000000000000e+00" ID="BTNRQWTTKFY"/>
           <Scale Value="1.000000000000000000e+00" ID="EDELKFRSRNI"/>
-          <X_Location Value="2.000000000000000000e+02" ID="SZKNFDTYCKL"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="OBGWIEPVZDG"/>
+          <X_Location Value="5.000000000000000000e+01" ID="SZKNFDTYCKL"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="OBGWIEPVZDG"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="SDNUFPFBIZO"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="OOXXPJSTUVG"/>
           <Y_Location Value="6.000000000000000000e+01" ID="BZLJXNIWFOK"/>
@@ -3310,7 +3310,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="BTPHQFIXGHA"/>
-          <X_Min Value="2.000000000000000000e+02" ID="FXRFOFNHPJV"/>
+          <X_Min Value="5.000000000000000000e+01" ID="FXRFOFNHPJV"/>
           <Y_Len Value="2.148528137423858198e+01" ID="TIYDIJLJIJK"/>
           <Y_Min Value="6.625735931288070901e+01" ID="VFOVWTNRLHG"/>
           <Z_Len Value="2.148528137423856776e+01" ID="TYHPCALGEZK"/>
@@ -3378,8 +3378,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="ORGMTKUNWDL"/>
           <Origin Value="0.000000000000000000e+00" ID="KKAJHOXHSFE"/>
           <Scale Value="1.000000000000000000e+00" ID="GGPHADVALWF"/>
-          <X_Location Value="2.000000000000000000e+02" ID="NRBJRHJQDAF"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="WYETNITENVA"/>
+          <X_Location Value="5.000000000000000000e+01" ID="NRBJRHJQDAF"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="WYETNITENVA"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="CLKKMDGDCHU"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="AERFCJGXEDL"/>
           <Y_Location Value="7.700000000000000000e+01" ID="EXIMHHFAXNF"/>
@@ -3861,7 +3861,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="TPLWPJGNQOR"/>
-          <X_Min Value="2.000000000000000000e+02" ID="JUIOWFHNDYV"/>
+          <X_Min Value="5.000000000000000000e+01" ID="JUIOWFHNDYV"/>
           <Y_Len Value="2.148528137423858198e+01" ID="ZXEZGHTHEXQ"/>
           <Y_Min Value="8.325735931288070901e+01" ID="WCIPTUPKOMJ"/>
           <Z_Len Value="2.148528137423856776e+01" ID="WWENKKBLLKQ"/>
@@ -3929,8 +3929,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="RHCFRZECBKA"/>
           <Origin Value="0.000000000000000000e+00" ID="DSMQFTQHFOV"/>
           <Scale Value="1.000000000000000000e+00" ID="QWYEQUAVFLH"/>
-          <X_Location Value="2.000000000000000000e+02" ID="LYLWZGPFUIZ"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="KQBDJSKGHWQ"/>
+          <X_Location Value="5.000000000000000000e+01" ID="LYLWZGPFUIZ"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="KQBDJSKGHWQ"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="QQSTUCHJPYJ"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="EGNSIAUKKLM"/>
           <Y_Location Value="9.400000000000000000e+01" ID="XZWGLPCLFSE"/>
@@ -4412,7 +4412,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="HJKKVSQLTVL"/>
-          <X_Min Value="2.000000000000000000e+02" ID="ERFXBMYCTNY"/>
+          <X_Min Value="5.000000000000000000e+01" ID="ERFXBMYCTNY"/>
           <Y_Len Value="2.148528137423858198e+01" ID="QESIDHYSLCY"/>
           <Y_Min Value="1.002573593128807090e+02" ID="QKOWKUUCGRN"/>
           <Z_Len Value="2.148528137423856776e+01" ID="LQFSXJVCGCQ"/>
@@ -4480,8 +4480,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="YWLQNQYYNSW"/>
           <Origin Value="0.000000000000000000e+00" ID="SVJGFALTUYG"/>
           <Scale Value="1.000000000000000000e+00" ID="HSWNOWDSIEH"/>
-          <X_Location Value="2.000000000000000000e+02" ID="YQZDQRHVNPH"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="CPWGPVLERCA"/>
+          <X_Location Value="5.000000000000000000e+01" ID="YQZDQRHVNPH"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="CPWGPVLERCA"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="TPGCPOOLKUH"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="UUYWMZDFCCR"/>
           <Y_Location Value="1.110000000000000000e+02" ID="GTPXLDTSOGK"/>
@@ -4963,7 +4963,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="MJFIWVSUVSH"/>
-          <X_Min Value="2.000000000000000000e+02" ID="RAURCQXQNTM"/>
+          <X_Min Value="5.000000000000000000e+01" ID="RAURCQXQNTM"/>
           <Y_Len Value="2.148528137423857487e+01" ID="CDETUZQIGKG"/>
           <Y_Min Value="5.775735931288071612e+01" ID="MUNYURLSBRF"/>
           <Z_Len Value="2.148528137423856776e+01" ID="HQONEBFWDTA"/>
@@ -5031,8 +5031,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="FZAFBRBYAOI"/>
           <Origin Value="0.000000000000000000e+00" ID="JRPAUQGAKZN"/>
           <Scale Value="1.000000000000000000e+00" ID="VZHIIROYTSR"/>
-          <X_Location Value="2.000000000000000000e+02" ID="JDEJMXZNKDZ"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="QCKRNZLYBBQ"/>
+          <X_Location Value="5.000000000000000000e+01" ID="JDEJMXZNKDZ"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="QCKRNZLYBBQ"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="JOLOCRGZXXP"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="URZSRRFKTSY"/>
           <Y_Location Value="6.850000000000000000e+01" ID="NLLNOFKADIJ"/>
@@ -5514,7 +5514,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="ARIVJQPTQKL"/>
-          <X_Min Value="2.000000000000000000e+02" ID="GVOFQFWLUNG"/>
+          <X_Min Value="5.000000000000000000e+01" ID="GVOFQFWLUNG"/>
           <Y_Len Value="2.148528137423858198e+01" ID="BUAKCFLSUGX"/>
           <Y_Min Value="7.475735931288070901e+01" ID="GHNVFHPNUAM"/>
           <Z_Len Value="2.148528137423856776e+01" ID="XOPUUTFHHJQ"/>
@@ -5582,8 +5582,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="LECFWQEELNK"/>
           <Origin Value="0.000000000000000000e+00" ID="JWIDONRFTWC"/>
           <Scale Value="1.000000000000000000e+00" ID="RIDPPVIUAZJ"/>
-          <X_Location Value="2.000000000000000000e+02" ID="PFUMPXIFVTF"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="WVEXBENQCDG"/>
+          <X_Location Value="5.000000000000000000e+01" ID="PFUMPXIFVTF"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="WVEXBENQCDG"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="JBYMSYTEPWM"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="UTZQLERMZAA"/>
           <Y_Location Value="8.550000000000000000e+01" ID="DJNBLVYZUQN"/>
@@ -6065,7 +6065,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="YQHYUSFWQRX"/>
-          <X_Min Value="2.000000000000000000e+02" ID="FLTRNVIUURS"/>
+          <X_Min Value="5.000000000000000000e+01" ID="FLTRNVIUURS"/>
           <Y_Len Value="2.148528137423858198e+01" ID="ANCNGZFJGRJ"/>
           <Y_Min Value="9.175735931288070901e+01" ID="NFQGXXNXTQV"/>
           <Z_Len Value="2.148528137423856776e+01" ID="FNEZMEQFJXN"/>
@@ -6133,8 +6133,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="IBFOYLNGHAS"/>
           <Origin Value="0.000000000000000000e+00" ID="WSXQDTDHJID"/>
           <Scale Value="1.000000000000000000e+00" ID="JGKIYKVXBQI"/>
-          <X_Location Value="2.000000000000000000e+02" ID="LUWTQCWXUEX"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="FTCPVBTZQMR"/>
+          <X_Location Value="5.000000000000000000e+01" ID="LUWTQCWXUEX"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="FTCPVBTZQMR"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="HMIMEUFZESW"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="UMBVMBKIIMS"/>
           <Y_Location Value="1.025000000000000000e+02" ID="VESWWAHQEUX"/>
@@ -6616,7 +6616,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="HLJDTKOQZFM"/>
-          <X_Min Value="2.000000000000000000e+02" ID="MSSUCQEYQQM"/>
+          <X_Min Value="5.000000000000000000e+01" ID="MSSUCQEYQQM"/>
           <Y_Len Value="2.148528137423858198e+01" ID="YVVDEOGHBQE"/>
           <Y_Min Value="1.087573593128807090e+02" ID="AWCLWNVPXDG"/>
           <Z_Len Value="2.148528137423856776e+01" ID="WTZYRUGOULP"/>
@@ -6684,8 +6684,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="YZZPSMPCROY"/>
           <Origin Value="0.000000000000000000e+00" ID="RLYXQNTIKNN"/>
           <Scale Value="1.000000000000000000e+00" ID="QCTDAZXEEJX"/>
-          <X_Location Value="2.000000000000000000e+02" ID="URMRWXFBNSF"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="WPRXGICCLSI"/>
+          <X_Location Value="5.000000000000000000e+01" ID="URMRWXFBNSF"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="WPRXGICCLSI"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="AYFTVKWKFGK"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="PBPZGADDTXZ"/>
           <Y_Location Value="1.195000000000000000e+02" ID="QMQUXAFBJDI"/>
@@ -7163,7 +7163,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="SBBAIFLXKLG"/>
-          <X_Min Value="2.000000000000000000e+02" ID="MZEQKQSNQZQ"/>
+          <X_Min Value="5.000000000000000000e+01" ID="MZEQKQSNQZQ"/>
           <Y_Len Value="2.148528137423858198e+01" ID="QIRLHVYXJIH"/>
           <Y_Min Value="-1.207426406871192910e+02" ID="EMQPSFJHFCS"/>
           <Z_Len Value="2.148528137423856776e+01" ID="XZMAORJITIG"/>
@@ -7231,8 +7231,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="MHORGSKMGAF"/>
           <Origin Value="0.000000000000000000e+00" ID="PDVOBPOIFEU"/>
           <Scale Value="1.000000000000000000e+00" ID="ZKWZEJCTVXW"/>
-          <X_Location Value="2.000000000000000000e+02" ID="QOLYKWCMNCA"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="COKPQLZFYID"/>
+          <X_Location Value="5.000000000000000000e+01" ID="QOLYKWCMNCA"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="COKPQLZFYID"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="XVASUCSGAJX"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="TXJBOHQIRPL"/>
           <Y_Location Value="-1.100000000000000000e+02" ID="QDDEMJNPPVA"/>
@@ -7714,7 +7714,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="QUTBGMIMALE"/>
-          <X_Min Value="2.000000000000000000e+02" ID="VWGFLACVCPB"/>
+          <X_Min Value="5.000000000000000000e+01" ID="VWGFLACVCPB"/>
           <Y_Len Value="2.148528137423858198e+01" ID="HZKMZYKBZMW"/>
           <Y_Min Value="-1.037426406871192910e+02" ID="HITHTLPDRLX"/>
           <Z_Len Value="2.148528137423856776e+01" ID="OQCHGMBMWXN"/>
@@ -7782,8 +7782,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="NGWAJOUXNPD"/>
           <Origin Value="0.000000000000000000e+00" ID="PFVUHQSUMNE"/>
           <Scale Value="1.000000000000000000e+00" ID="QLWJJUTKDTE"/>
-          <X_Location Value="2.000000000000000000e+02" ID="YJABMAYLYUK"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="YKAIAUUNXCM"/>
+          <X_Location Value="5.000000000000000000e+01" ID="YJABMAYLYUK"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="YKAIAUUNXCM"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="WMCXMCDZKEN"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="GEBDAMCUJED"/>
           <Y_Location Value="-9.300000000000000000e+01" ID="JHOKYGTMEPG"/>
@@ -8265,7 +8265,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="TXJPZUENXVT"/>
-          <X_Min Value="2.000000000000000000e+02" ID="XAQKZMMXBBU"/>
+          <X_Min Value="5.000000000000000000e+01" ID="XAQKZMMXBBU"/>
           <Y_Len Value="2.148528137423858198e+01" ID="JMFBBPEFEHA"/>
           <Y_Min Value="-8.674264068711929099e+01" ID="VPRCYVMXPWN"/>
           <Z_Len Value="2.148528137423856776e+01" ID="HVKXSFTVOAO"/>
@@ -8333,8 +8333,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="TJHREKGIJSH"/>
           <Origin Value="0.000000000000000000e+00" ID="VMPSQBTUQHY"/>
           <Scale Value="1.000000000000000000e+00" ID="WUIQQFFFZEG"/>
-          <X_Location Value="2.000000000000000000e+02" ID="LJTMJQVHTBX"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="MZWYXRCWLVL"/>
+          <X_Location Value="5.000000000000000000e+01" ID="LJTMJQVHTBX"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="MZWYXRCWLVL"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="WWSZAEGHOCU"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="YRCEEBRPWNX"/>
           <Y_Location Value="-7.600000000000000000e+01" ID="KKSOZJTSXUF"/>
@@ -8816,7 +8816,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="CIVGOSPKNOX"/>
-          <X_Min Value="2.000000000000000000e+02" ID="HPTQBLSMLZF"/>
+          <X_Min Value="5.000000000000000000e+01" ID="HPTQBLSMLZF"/>
           <Y_Len Value="2.148528137423858198e+01" ID="UMJSZYSYHTR"/>
           <Y_Min Value="-6.974264068711929099e+01" ID="FHTBTPXCJQO"/>
           <Z_Len Value="2.148528137423856776e+01" ID="LBOEWYMNNFD"/>
@@ -8884,8 +8884,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="QTHXERNMCOZ"/>
           <Origin Value="0.000000000000000000e+00" ID="LJDMMUDBQGA"/>
           <Scale Value="1.000000000000000000e+00" ID="OEMUJHZCVFI"/>
-          <X_Location Value="2.000000000000000000e+02" ID="ZKFFIZJOGLC"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="VJPWUULOUXI"/>
+          <X_Location Value="5.000000000000000000e+01" ID="ZKFFIZJOGLC"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="VJPWUULOUXI"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="LLFEGCWDUCV"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="YCQJJIVJSPY"/>
           <Y_Location Value="-5.900000000000000000e+01" ID="XCLCQFXTVEE"/>
@@ -9367,7 +9367,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="WONYWSGPOMT"/>
-          <X_Min Value="2.000000000000000000e+02" ID="UQLYFBWBJUT"/>
+          <X_Min Value="5.000000000000000000e+01" ID="UQLYFBWBJUT"/>
           <Y_Len Value="2.148528137423858198e+01" ID="ADAETQVWIQL"/>
           <Y_Min Value="-1.122426406871192910e+02" ID="QERHMKRQXHT"/>
           <Z_Len Value="2.148528137423856776e+01" ID="HOJGPGHBCKK"/>
@@ -9435,8 +9435,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="MRWIBNVXGKB"/>
           <Origin Value="0.000000000000000000e+00" ID="WTPGZIYFXSE"/>
           <Scale Value="1.000000000000000000e+00" ID="CHCDVMCOIZX"/>
-          <X_Location Value="2.000000000000000000e+02" ID="OVQEQNRUHGM"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="HCWIQHKCHGK"/>
+          <X_Location Value="5.000000000000000000e+01" ID="OVQEQNRUHGM"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="HCWIQHKCHGK"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="VEWYVVMAMJP"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="EOLRBMGUUPB"/>
           <Y_Location Value="-1.015000000000000000e+02" ID="XCSSMCWQFZF"/>
@@ -9918,7 +9918,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="WNCGJVXMRDZ"/>
-          <X_Min Value="2.000000000000000000e+02" ID="YQLPCWZWVOC"/>
+          <X_Min Value="5.000000000000000000e+01" ID="YQLPCWZWVOC"/>
           <Y_Len Value="2.148528137423858198e+01" ID="JYSQYZAHYLO"/>
           <Y_Min Value="-9.524264068711929099e+01" ID="KFTUKRJKUUA"/>
           <Z_Len Value="2.148528137423856776e+01" ID="ASACUCHLGOT"/>
@@ -9986,8 +9986,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="JJQNUVPIOQE"/>
           <Origin Value="0.000000000000000000e+00" ID="OKWAJGZLDIJ"/>
           <Scale Value="1.000000000000000000e+00" ID="SUNYWGUXNAV"/>
-          <X_Location Value="2.000000000000000000e+02" ID="FZEAKBWQHUW"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="YTJCYZTTLZF"/>
+          <X_Location Value="5.000000000000000000e+01" ID="FZEAKBWQHUW"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="YTJCYZTTLZF"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="ZBPPWZPWKCF"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="OAWUQXRLINQ"/>
           <Y_Location Value="-8.450000000000000000e+01" ID="PIYDVWCPDSW"/>
@@ -10469,7 +10469,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="FMNZAWZBSWA"/>
-          <X_Min Value="2.000000000000000000e+02" ID="PHGHSRWNVQM"/>
+          <X_Min Value="5.000000000000000000e+01" ID="PHGHSRWNVQM"/>
           <Y_Len Value="2.148528137423858198e+01" ID="WFRAAWVBEZL"/>
           <Y_Min Value="-7.824264068711929099e+01" ID="KKDWJFALFXL"/>
           <Z_Len Value="2.148528137423856776e+01" ID="FAAJBDCRWMO"/>
@@ -10537,8 +10537,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="YONCFUNUOOP"/>
           <Origin Value="0.000000000000000000e+00" ID="KRUZGGCBJBD"/>
           <Scale Value="1.000000000000000000e+00" ID="RBBSFTHEINN"/>
-          <X_Location Value="2.000000000000000000e+02" ID="IAQIOCUJMDU"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="ZOVYSGOUCVO"/>
+          <X_Location Value="5.000000000000000000e+01" ID="IAQIOCUJMDU"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="ZOVYSGOUCVO"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="JVVHZJBNYXL"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="LWCTDCTCWWW"/>
           <Y_Location Value="-6.750000000000000000e+01" ID="KTSASKKFJKG"/>
@@ -11020,7 +11020,7 @@ void Scale(double curr_scale )
         </Attach>
         <BBox>
           <X_Len Value="2.400000000000000000e+01" ID="RWFVBHARGQI"/>
-          <X_Min Value="2.000000000000000000e+02" ID="XGPISAEORQT"/>
+          <X_Min Value="5.000000000000000000e+01" ID="XGPISAEORQT"/>
           <Y_Len Value="2.148528137423858198e+01" ID="XWMELCNVBZK"/>
           <Y_Min Value="-1.287426406871192910e+02" ID="TVFXXWORHRL"/>
           <Z_Len Value="2.148528137423856776e+01" ID="MZWVHPMCMYV"/>
@@ -11088,8 +11088,8 @@ void Scale(double curr_scale )
           <Last_Scale Value="1.000000000000000000e+00" ID="VCNQEBPXRYQ"/>
           <Origin Value="0.000000000000000000e+00" ID="CVXMURHMVJC"/>
           <Scale Value="1.000000000000000000e+00" ID="OOFNTFRXUBW"/>
-          <X_Location Value="2.000000000000000000e+02" ID="JMCADOEMTJV"/>
-          <X_Rel_Location Value="2.000000000000000000e+02" ID="JZJGWIINNUU"/>
+          <X_Location Value="5.000000000000000000e+01" ID="JMCADOEMTJV"/>
+          <X_Rel_Location Value="5.000000000000000000e+01" ID="JZJGWIINNUU"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="TZQWQXXZLTS"/>
           <X_Rotation Value="0.000000000000000000e+00" ID="GLDNNWQAWCE"/>
           <Y_Location Value="-1.180000000000000000e+02" ID="LYTSMSMFWCX"/>
@@ -11556,7 +11556,16 @@ void Scale(double curr_scale )
       </FuselageGeom>
     </Geom>
   </Vehicle>
-  <Materials/>
+  <Materials>
+    <Material>
+      <Name>Custom</Name>
+      <Ambient>2.500000000000000000e-01, 2.500000000000000000e-01, 2.500000000000000000e-01, 1.000000000000000000e+00, </Ambient>
+      <Diffuse>5.000000000000000000e-01, 5.000000000000000000e-01, 5.000000000000000000e-01, 1.000000000000000000e+00, </Diffuse>
+      <Specular>5.999999999999999778e-01, 5.999999999999999778e-01, 5.999999999999999778e-01, 1.000000000000000000e+00, </Specular>
+      <Emissive>0.000000000000000000e+00, 0.000000000000000000e+00, 0.000000000000000000e+00, 1.000000000000000000e+00, </Emissive>
+      <Shininess>1.280000000000000000e+02</Shininess>
+    </Material>
+  </Materials>
   <UserParmContainer>
     <NumUserParms>16</NumUserParms>
     <UserParm Value="0.000000000000000000e+00" ID="User_0" Name="User_0" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
@@ -11672,13 +11681,13 @@ void Scale(double curr_scale )
         <m_LoadDistYMaxIsManual Value="0.000000000000000000e+00" ID="KSJLPBBXOYG"/>
         <m_LoadDistYMin Value="-1.000000000000000021e-02" ID="RDWXVYOTVRX"/>
         <m_LoadDistYMinIsManual Value="0.000000000000000000e+00" ID="FQOGLDKFCJR"/>
-        <m_SweepXMax Value="1.000000000001000089e+00" ID="VCVPZIFBUVR"/>
+        <m_SweepXMax Value="9.999999999999999799e-13" ID="VCVPZIFBUVR"/>
         <m_SweepXMaxIsManual Value="0.000000000000000000e+00" ID="TRVPRQJNUDB"/>
         <m_SweepXMin Value="-9.999999999999999799e-13" ID="TKCPHECYUEB"/>
         <m_SweepXMinIsManual Value="0.000000000000000000e+00" ID="UZOQTXZRFQE"/>
-        <m_SweepYMax Value="2.900000000000099831e+01" ID="SBGJDFVZBCT"/>
+        <m_SweepYMax Value="1.000000000001000089e+00" ID="SBGJDFVZBCT"/>
         <m_SweepYMaxIsManual Value="0.000000000000000000e+00" ID="XBXSFWYPSZQ"/>
-        <m_SweepYMin Value="2.799999999999900169e+01" ID="IHKQNSURKRT"/>
+        <m_SweepYMin Value="-9.999999999999999799e-13" ID="IHKQNSURKRT"/>
         <m_SweepYMinIsManual Value="0.000000000000000000e+00" ID="KIYSYNEKBVI"/>
         <m_UnsteadyXMax Value="1.000000000000000000e+00" ID="YZUQBTQIGVI"/>
         <m_UnsteadyXMaxIsManual Value="0.000000000000000000e+00" ID="WOAZBXHTCWX"/>
@@ -11750,13 +11759,85 @@ void Scale(double curr_scale )
     </CpSlice>
     <UnsteadyGroupCount>1</UnsteadyGroupCount>
     <Unsteady_Group>
-      <NumberOfComponents>2</NumberOfComponents>
+      <NumberOfComponents>20</NumberOfComponents>
       <Component>
         <CompID>AAOLYXEQWJ</CompID>
         <SurfIndex>1</SurfIndex>
       </Component>
       <Component>
         <CompID>MEJLQITPHW</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>YQGMUFQAAB</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>YQGMUFQAAB</CompID>
+        <SurfIndex>2</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>DDMPWNVTWJ</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>IGIJQCACQI</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>SVVMAUOJMX</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>JKCSMPGELN</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>QCYJUUOIJD</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>DOTHUZVVDP</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>PEMTNFXKOC</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>SXHIRINZVF</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>YAWIFYTBPE</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>RNFCTFPPWD</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>HAGZUZWJEN</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>QYZXLTINML</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>RRDOAYHZTL</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>JKOYHHQRBQ</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>LRRMJSBQWB</CompID>
+        <SurfIndex>1</SurfIndex>
+      </Component>
+      <Component>
+        <CompID>ASWBLIIVOY</CompID>
         <SurfIndex>1</SurfIndex>
       </Component>
       <ParmContainer>
@@ -12029,30 +12110,30 @@ void Scale(double curr_scale )
         <Alt Value="2.000000000000000000e+04" ID="WTVDZTNKWBG"/>
         <AltLengthUnit Value="0.000000000000000000e+00" ID="ROHIGHEUCWN"/>
         <DeltaTemp Value="0.000000000000000000e+00" ID="SJGXRVJCKIU"/>
-        <Density Value="7.646999999999999631e-02" ID="EAGORIVZPQT"/>
-        <DynaVisc Value="9.999999999999999799e-13" ID="URZZFEGUYSW"/>
+        <Density Value="1.266412590332830759e-03" ID="EAGORIVZPQT"/>
+        <DynaVisc Value="3.323942381921151671e-07" ID="URZZFEGUYSW"/>
         <ExcresType Value="0.000000000000000000e+00" ID="HVZEWBERNDT"/>
         <ExcresVal Value="0.000000000000000000e+00" ID="RYBRLTFWZFE"/>
         <ExportSubCompFlag Value="0.000000000000000000e+00" ID="ESYGLLHOXDH"/>
         <FreestreamType Value="0.000000000000000000e+00" ID="RREPBUBLFTI"/>
         <LamCfEqnType Value="0.000000000000000000e+00" ID="ZIHNITMZOHF"/>
         <LengthUnit Value="4.000000000000000000e+00" ID="BPRIZBKCDWV"/>
-        <Mach Value="0.000000000000000000e+00" ID="KOXYCHWCADL"/>
-        <Pres Value="2.116221000000000004e+03" ID="PHAHTGCLQJG"/>
-        <Re_L Value="0.000000000000000000e+00" ID="VUGFWPZARYC"/>
-        <RefFlag Value="0.000000000000000000e+00" ID="ACOGMRQJCVW"/>
+        <Mach Value="4.822255386125843812e-01" ID="KOXYCHWCADL"/>
+        <Pres Value="9.724938058607042421e+02" ID="PHAHTGCLQJG"/>
+        <Re_L Value="1.904985774153036764e+06" ID="VUGFWPZARYC"/>
+        <RefFlag Value="1.000000000000000000e+00" ID="ACOGMRQJCVW"/>
         <Set Value="1.000000000000000000e+00" ID="DTKQLZGTUGV"/>
         <SortBy Value="0.000000000000000000e+00" ID="KJXNGXXUZSB"/>
         <SpecificHeatRatio Value="1.399999999999999911e+00" ID="NKJPQXERCRZ"/>
-        <Sref Value="1.000000000000000000e+02" ID="OOQDEGPYBHP"/>
-        <Temp Value="2.881499999999999773e+02" ID="JAHKRSWBKYB"/>
+        <Sref Value="4.301395252510128921e+04" ID="OOQDEGPYBHP"/>
+        <Temp Value="-1.232320000000004256e+01" ID="JAHKRSWBKYB"/>
         <TempUnit Value="2.000000000000000000e+00" ID="NMPHHXLVQBI"/>
         <TurbCfEqnType Value="1.000000000000000000e+01" ID="LJKKCOLZGHP"/>
         <Vinf Value="5.000000000000000000e+02" ID="LDOJFJJWAKC"/>
         <VinfUnitType Value="0.000000000000000000e+00" ID="BFDKZBEHGNY"/>
       </ParasiteDrag>
     </ParmContainer>
-    <ReferenceGeomID/>
+    <ReferenceGeomID>AAOLYXEQWJ</ReferenceGeomID>
     <Excrescence>
       <NumExcres>0</NumExcres>
     </Excrescence>
