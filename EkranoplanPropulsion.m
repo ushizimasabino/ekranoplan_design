@@ -2,77 +2,91 @@ clear
 close all
 clc
 %% Constants
-phi = 0.25;
+% Design Parameters
 LHV = 43E6; % kJ/kg
 rF = 1.5;
-rP = linspace(20,70);
-BPR = linspace(5,15);
-effFC = 0.9;
-effT = 0.95;
+rP = linspace(20,50);
+BPR = linspace(8,12);
+cooling = 0.15; % mass of cooling stream over total mass flow
+% Design Limitations
+nozzlepressureratio = 0.985;
+diffuserpressureratio = 0.97;
+combustpressureratio = 0.96;
+effCombust = 0.995;
+effF = 0.89;
+effC = 0.9;
+effT = 0.89;
+effN = 1;
+effD = 1;
+TIT = 2000; % K
+% Perfect Gas Assumption
 gamma = 1.4;
 R = 287; % J/kg*K
 M = 0.7;
+% Ambient Values
 T0 = 288.15; % K
-T1 = T0; % K
 p0 = 101.325; % kPa
+T1 = T0; % K
 p1 = p0; % K
 govergless1 = gamma/(gamma-1);
 gless1over2 = (gamma-1)/2;
 gless1overg = 1/govergless1;
 cp = govergless1*R; % J/kg*K
-p03 = zeros(100,100);
-T03 = zeros(100,100);
-p04 = zeros(100,100);
-T04 = zeros(100,100);
-T045 = zeros(100,100);
-p045 = zeros(100,100);
-T05 = zeros(100,100);
-p05 = zeros(100,100);
-T09 = zeros(100,100);
-p09 = zeros(100,100);
+phi = zeros(100,100);
+p0_3 = zeros(100,100);
+T0_3 = zeros(100,100);
+p0_4 = zeros(100,100);
+T0_4 = zeros(100,100);
+T0_45 = zeros(100,100);
+p0_45 = zeros(100,100);
+T0_5 = zeros(100,100);
+p0_5 = zeros(100,100);
+T0_9 = zeros(100,100);
+p0_9 = zeros(100,100);
 Vc = zeros(100,100);
 specificnetthrust = zeros(100,100);
 tsfc = zeros(100,100);
 effProp = zeros(100,100);
 %% Constant Calculations
 % Diffuser
-p01 = p1*(1+gless1over2*M^2)^govergless1; % kPa
-p02 = p01; % kPa
-T01 = T1*(1+gless1over2*M^2); % K
-T02 = T01; % K
+p0_1 = p1*(1+gless1over2*M^2)^govergless1; % kPa
+p0_2 = p0_1*diffuserpressureratio; % kPa
+T0_1 = T1*(1+gless1over2*M^2); % K
+T0_2 = T0_1; % K
 % Fan
-p013 = rF*p02; % kPa
-p023 = p013; % kPa
-T013 = T02*(1+(1/effFC)*(rF^gless1overg-1)); % K
-T023 = T013; % K
+p0_13 = rF*p0_2; % kPa
+p0_23 = p0_13; % kPa
+T0_13 = T0_2*(1+(1/effF)*(rF^gless1overg-1)); % K
+T0_23 = T0_13; % K
 % Bypass
-T019 = T013; % K
-p019 = p013; % kPa
+T0_19 = T0_13; % K
+p0_19 = p0_13; % kPa
 % Combustor
-mfoverma = (12*12.01+26*1.008)/(18.5*2*16+18.5*3.76*2*14.01);
+mfoverma = (12*12.01+26*1.008)/(18.5*2*16+18.5*3.76*2*14.01); % stoichiometric fuel to air mass ratio
 % Velocity
-Vb = sqrt(2*govergless1*R.*T013.*(1-(p1./p013).^gless1overg)); % m/s
+Vb = sqrt(2*govergless1*R.*T0_13.*(1-(p1./p0_13).^gless1overg)); % m/s
 V = M*sqrt(gamma*R*T0); % m/s
 %% Variable Calculations
 for i = 1:100
     for j = 1:100
         % Core
-        p03(i,j) = rP(i)*p023; % kPa
-        T03(i,j) = T023*(1+(1/effFC)*(rP(i).^gless1overg-1)); % K
-        p04(i,j) = p03(i,j); % kPa
-        T04(i,j) = T03(i,j)+mfoverma*LHV*phi/cp; % K
-        T045(i,j) = T04(i,j)-(T023/effFC)*(rP(i).^gless1overg-1); % K
-        p045(i,j) = p04(i,j).*(1-((T023)./(effFC*effT*T04(i,j))).*(rP(i).^gless1overg-1)).^govergless1; % kPa
-        T05(i,j) = T045(i,j)-(1+BPR(j)).*(T02/effFC).*(rF^gless1overg-1); % K
-        p05(i,j) = p045(i,j).*(1-(1+BPR(j)).*((T02)./(effFC*effT*T045(i,j))).*(rF^gless1overg-1)).^govergless1; % kPa
-        p09(i,j) = p05(i,j); % kPa
-        T09(i,j) = T05(i,j); % K
+        p0_3(i,j) = rP(i)*p0_23; % kPa
+        T0_3(i,j) = T0_23*(1+(1/effC)*(rP(i).^gless1overg-1)); % K
+        p0_4(i,j) = p0_3(i,j).*combustpressureratio; % kPa
+        phi(i,j) = (cp.*(TIT-T0_3(i,j)))./(mfoverma*LHV); % K
+        T0_4(i,j) = T0_3(i,j)+(1-cooling)*effCombust*mfoverma*LHV*phi(i,j)/cp; % K
+        T0_45(i,j) = T0_4(i,j)-(T0_23/effC)*(rP(i).^gless1overg-1); % K
+        p0_45(i,j) = p0_4(i,j).*(1-((T0_23)./(effC*effT*T0_4(i,j))).*(rP(i).^gless1overg-1)).^govergless1; % kPa
+        T0_5(i,j) = T0_45(i,j)-(1+BPR(j)).*(T0_2/effF).*(rF^gless1overg-1); % K
+        p0_5(i,j) = p0_45(i,j).*(1-(1+BPR(j)).*((T0_2)./(effF*effT*T0_45(i,j))).*(rF^gless1overg-1)).^govergless1; % kPa
+        p0_9(i,j) = p0_5(i,j); % kPa
+        T0_9(i,j) = T0_5(i,j); % K
         % Velocity
-        Vc(i,j) = sqrt(2*govergless1*R.*T05(i,j).*(1-(p1./p05(i,j)).^gless1overg)); % m/s
+        Vc(i,j) = sqrt(2*govergless1*R.*T0_5(i,j).*(1-(p1./p0_5(i,j)).^gless1overg)); % m/s
         specificnetthrust(i,j) = Vc(i,j)-V+BPR(j).*(Vb-V);
-        tsfc(i,j) = phi*mfoverma./specificnetthrust(i,j);
+        tsfc(i,j) = phi(i,j)*mfoverma./specificnetthrust(i,j);
         effProp(i,j) = (2*specificnetthrust(i,j)*V)/(BPR(j).*(Vb^2-V^2)+(Vc(i,j).^2-V^2));
-        if (1-(p1/p05(i,j))^gless1overg) < 0
+        if (1-(p1/p0_5(i,j))^gless1overg) < 0
              specificnetthrust(i,j) = NaN;
              tsfc(i,j) = NaN;
              effProp(i,j) = NaN;
@@ -103,14 +117,17 @@ ylabel('Pressure Ratio')
 propGraph.FaceColor = 'interp';
 %% Diameter calculations
 maxspecificnetthrustcolumns = max(specificnetthrust);
-maxspecificnetthrust = max(maxspecificnetthrustcolumns)
+maxspecificnetthrust = max(maxspecificnetthrustcolumns);
 maxpropeffcolumns = max(effProp);
-maxpropeff = max(maxpropeffcolumns)
+maxpropeff = max(maxpropeffcolumns);
 mintsfccolumns = min(tsfc);
-mintsfc = min(mintsfccolumns)
-Vnew = 293.333;
-masscore = 118.33;
-rho = 1.225;
-coreD = sqrt(masscore*4/(rho*Vnew*pi()));
-massbypass = masscore*13.28;
-bypassD = sqrt((4*massbypass/(rho*pi()*Vnew))+coreD^2);
+mintsfc = min(mintsfccolumns);
+totalThrust = 1000000*4.44822; % N
+numberEngines = [10 8];
+engineThrust = totalThrust./numberEngines; % N
+masscore = engineThrust./maxspecificnetthrust; % kg/s
+rho = 1.225; % kg/m^3
+coreD = sqrt(masscore.*4/(rho*V*pi())) % m
+massbypass = masscore.*9.8182; % kg/s
+bypassD = sqrt((4*massbypass./(rho*pi()*V))+coreD.^2) % m
+tsfcChosen = 1.8361*10^-5;
