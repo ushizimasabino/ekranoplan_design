@@ -4,9 +4,9 @@ clc
 %% Constants
 % Design Parameters
 LHV = 43E6; % kJ/kg
-rF = 1.5;
-rP = linspace(20,50);
-BPR = linspace(8,12);
+rF = 1.3;
+rP = linspace(20,60);
+BPR = linspace(6,16);
 cooling = 0.15; % mass of cooling stream over total mass flow
 % Design Limitations
 nozzlepressureratio = 0.985;
@@ -84,7 +84,7 @@ for i = 1:100
         % Velocity
         Vc(i,j) = sqrt(2*govergless1*R.*T0_5(i,j).*(1-(p1./p0_5(i,j)).^gless1overg)); % m/s
         specificnetthrust(i,j) = Vc(i,j)-V+BPR(j).*(Vb-V);
-        tsfc(i,j) = phi(i,j)*mfoverma./specificnetthrust(i,j);
+        tsfc(i,j) = (1-cooling)*phi(i,j)*mfoverma./specificnetthrust(i,j);
         effProp(i,j) = (2*specificnetthrust(i,j)*V)/(BPR(j).*(Vb^2-V^2)+(Vc(i,j).^2-V^2));
         if (1-(p1/p0_5(i,j))^gless1overg) < 0
              specificnetthrust(i,j) = NaN;
@@ -101,6 +101,7 @@ title('Specific Net Thrust')
 xlabel('BPR')
 ylabel('Pressure Ratio')
 ThrustGraph.FaceColor = 'interp';
+colorbar
 % Thrust Specific Fuel Consumption
 figure()
 tsfcGraph = pcolor(BPR,rP,real(tsfc));
@@ -108,6 +109,7 @@ title('Thrust Specific Fuel Consumption')
 xlabel('BPR')
 ylabel('Pressure Ratio')
 tsfcGraph.FaceColor = 'interp';
+colorbar
 % Propulsive Efficiency
 figure()
 propGraph = pcolor(BPR,rP,real(effProp));
@@ -115,6 +117,7 @@ title('Propulsive Efficiency')
 xlabel('BPR')
 ylabel('Pressure Ratio')
 propGraph.FaceColor = 'interp';
+colorbar
 %% Diameter calculations
 maxspecificnetthrustcolumns = max(specificnetthrust);
 maxspecificnetthrust = max(maxspecificnetthrustcolumns);
@@ -122,12 +125,12 @@ maxpropeffcolumns = max(effProp);
 maxpropeff = max(maxpropeffcolumns);
 mintsfccolumns = min(tsfc);
 mintsfc = min(mintsfccolumns);
+myspecificthrust = 1.1856*10^3;
 totalThrust = 1000000*4.44822; % N
 numberEngines = [10 8];
 engineThrust = totalThrust./numberEngines; % N
-masscore = engineThrust./maxspecificnetthrust; % kg/s
+masscore = engineThrust./myspecificthrust; % kg/s
 rho = 1.225; % kg/m^3
 coreD = sqrt(masscore.*4/(rho*V*pi())) % m
 massbypass = masscore.*9.8182; % kg/s
 bypassD = sqrt((4*massbypass./(rho*pi()*V))+coreD.^2) % m
-tsfcChosen = 1.8361*10^-5;
